@@ -48,6 +48,21 @@ class Motorcycle : Vehicle
     }
 }
 
+class Truck : Vehicle 
+{
+    private  int loadCapacity;
+    
+    public Truck()
+    {
+        loadCapacity=10000;
+    }
+    
+    public override void DisplayInfo()
+    {
+        Console.WriteLine(loadCapacity);
+    }
+}
+
 class HelloWorld
 {
     public static void Main(string[] args)
@@ -55,9 +70,11 @@ class HelloWorld
         Vehicle vhc=new Vehicle();
         Car car=new Car();
         Motorcycle motorcycle=new Motorcycle();
+        Truck truck=new Truck();
         
         vhc.DisplayInfo();
         car.DisplayInfo();
         motorcycle.DisplayInfo();
+        truck.DisplayInfo();
     }
 }
